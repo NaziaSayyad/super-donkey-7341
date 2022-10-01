@@ -17,8 +17,8 @@ function Home(){
                         <Text>awarded in</Text>
                         <img src="https://img.shop.com/Image/resources/images/cashback-icon.svg" width='20px' />
                         <Text> Cashback!</Text>
-                        <Button colorScheme='white' color='#000063'
-                            border='1px' _hover={{ bg: '#000063', color: 'white' }} variant='solid'> Button </Button>
+                        <Button colorScheme='white' color='#000063' fontWeight='bold'
+                            border='1px' _hover={{ bg: '#000063', color: 'white' }} variant='solid'> Learn More </Button>
                     </Box>
                 </Container>
 

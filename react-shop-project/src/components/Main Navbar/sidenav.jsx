@@ -2,6 +2,7 @@ import {  Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, Dra
 import React from "react"
 import { Link } from "react-router-dom";
 import Sidecontent from "./sideNavboxescontent";
+
 function SideWindow() {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
