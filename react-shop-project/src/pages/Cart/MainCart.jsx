@@ -9,7 +9,7 @@ function Cart() {
     const remove =(index) =>{
         data.splice(index,1);
         localStorage.setItem("data",JSON.stringify(data));
-        Cart();
+       
     }
     return(
         <>
