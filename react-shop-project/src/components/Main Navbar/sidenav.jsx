@@ -1,4 +1,4 @@
-import {  Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Heading, PopoverTrigger, Select, useDisclosure } from "@chakra-ui/react"
+import {  Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Heading, Image, PopoverTrigger, Select, useDisclosure } from "@chakra-ui/react"
 import React from "react"
 import { Link } from "react-router-dom";
 import Sidecontent from "./sideNavboxescontent";
@@ -8,7 +8,10 @@ function SideWindow() {
 
     return (
         <>
+            <Flex>
+            <Image src='https://img.shop.com/Image/resources/images/icon-menu-24px.svg' />
             <Button onClick={onOpen}>Categories</Button>
+            </Flex>
             <Drawer placement='left' onClose={onClose} isOpen={isOpen}>
                 <DrawerOverlay>
                 <DrawerContent>
@@ -41,8 +44,7 @@ function SideWindow() {
                        <>
                        <Sidecontent  name='Halloween' path='#' />
                        <Sidecontent  name='Featured Brand Shark Ninja' path='#' />
-                       <Sidecontent  name='Newly Launched Product' />
-                       <Sidecontent  name='Clothes' path='/clothes' />
+                       <Sidecontent  name='Newly Launched Products' path='/clothes' />
                        <Sidecontent  name='Beauty' path='/beauty' />
                        <Sidecontent  name='shoes' path='/shoes' />
                        <Sidecontent  name='Electronics'path='/electronics' />

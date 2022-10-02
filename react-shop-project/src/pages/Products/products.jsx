@@ -1,8 +1,14 @@
 import { Box, Button, ButtonGroup, color, Divider, Flex, Grid, GridItem, Image, Text, VStack } from "@chakra-ui/react";
+import { useState } from "react";
 import Cartdrawer from "../Cart/CartsideDrawer";
 
-function Products({img,name,id,price}) {
-   
+function Products({img,name,id,price,item}) {
+//    console.log(item.id,"item");
+
+//    if(item.id==id){
+    
+//    }
+// console.log('iid',id)
     return (
         <>
         
@@ -32,6 +38,7 @@ function Products({img,name,id,price}) {
                    <Cartdrawer 
                    key={id}
                    cartitem={id}
+                   
                    />
 
                     </ButtonGroup>

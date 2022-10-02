@@ -4,7 +4,7 @@ function SideBar() {
     return (
         <div>
 
-            <Box border='1px solid' width='200px' ml='5'>
+            <Box  width='200px' ml='5'>
                 <Box mt='5'>
                     <Box display='flex' gap='1' ml='5'>
                         <Input type='checkbox' w='5' h='5' border='2px solid Black' />

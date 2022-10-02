@@ -1,26 +1,21 @@
-import { Box, Button, ButtonGroup, Divider, Flex, Grid, GridItem, Image, Select, Text } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
-
+import { Box, Button, ButtonGroup, Divider, Flex, Grid, GridItem, Select, Text, Image } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import Cartdrawer from "./Cart/CartsideDrawer";
 import SideBar from "./Products/SideBar";
 import axios from "axios";
 
-
-
 const getdata = () => {
-    return axios.get(`https://intense-journey-23599.herokuapp.com/api/shoe`)
+    return axios.get(`https://my-personal-api-data.herokuapp.com/api/products`)
 }
 const handlesorting = (params = {}) => {
-    return axios.get(`https://intense-journey-23599.herokuapp.com/api/shoe`, {
+    return axios.get(`https://my-personal-api-data.herokuapp.com/api/products`, {
         params: {
             _sort: "params.sort",
             _order: "params.order"
         }
     })
 }
-
-function Shoes(){
-    
+function Clothes (){
         const [data, setdata] = useState([]);
     
         const fetchdata = () => {
@@ -28,16 +23,12 @@ function Shoes(){
         }
         const handleAsc = () => {
             // handlesorting({sort:"price",order:"asc"}).then((res) => setdata(res))
-            console.log('in');
     
             console.log('in');
         }
         const handledesc = () => {
             // handlesorting({sort:"price",order:"desc"}).then((res) => setdata(res))
             console.log('lk');
-        }
-        const handleselect =(e) =>{
-            console.log(e.target.value)
         }
         useEffect(() => {
             fetchdata();
@@ -46,16 +37,17 @@ function Shoes(){
         console.log(data)
         return (
             <>
-                <Select placeholder='SORT:' w='150PX' onChange={handleselect}>
-                    <option value='desc' onClick={handledesc}>HIGH TO LOW </option>
-                    <option value='asc' onClick={(e) =>handleAsc(e) }>LOW TO HIGH </option>
-                    <option value='mast'>MASTERS </option>
+                <Select placeholder='Select option' w='150px'>
+                    <option value='option1' onClick={handleAsc}>Option 1</option>
+                    <option value='option2' onClick={handledesc}>Option 2</option>
+                    <option value='option3'>Option 3</option>
                 </Select>
                 <Divider />
                 <Flex>
                     <SideBar />
-                   
-                    <Grid templateColumns='repeat(3, 1fr)' gap={3} p='4'>
+                    {/* <Box border='1px solid Black' width='full' ml='3' h='800px'> */}
+    
+                    <Grid templateColumns='repeat(3, 1fr)' gap={3} p='4' >
                         {
                             data.map((el) => (
                                 <GridItem key={el.id} _hover={{ shadow: 'dark-lg' }}>
@@ -67,7 +59,7 @@ function Shoes(){
                                         item = {el}
                                     />
                                 </GridItem> */}
-                                 <Box  width='full' h='600px'p='1'>
+                                 <Box width='full' h='600px'p='1'>
                         <Box>
                             <Image  src={el.image} h='350px' w='full' />
                         </Box>
@@ -111,5 +103,7 @@ function Shoes(){
         )
     
     
+
 }
-export default Shoes;
+export default Clothes
+// https://my-personal-api-data.herokuapp.com/api/products

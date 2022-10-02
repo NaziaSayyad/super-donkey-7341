@@ -6,11 +6,13 @@ import React from "react"
 import { Link } from "react-router-dom"
 import Boxes from "./Boxes"
 import Circleimages from "./circleimage"
+import Footer from "../Footer"
+import LargeWithLogoCentered from "./foot"
 function Home(){
     return(
         <>
         {/* ..................................................Body Starting ........................................................................... */}
-        <Box border='1 px solid' p='4' mt='5%' shadow='2xl'>
+        <Box  p='4' mt='5%' shadow='2xl'>
                 <Container>
                     <Box display='flex' gap='2'>
                         <Text fontSize='2xl'> $50,008,362 </Text>
@@ -34,7 +36,7 @@ function Home(){
             </Box>
  {/* ..................................................Body Starting ........................................................................... */}
        
-            <Box border='1px solid' mt='2%' boxShadow='2xl' >
+            <Box  mt='2%' boxShadow='2xl' >
                 <Heading alignContent='end' ml='60%'> Popular Brands </Heading>
                 <Flex margin='20px'>
                     <Box>
@@ -83,7 +85,7 @@ function Home(){
             </Box>
             {/* .......................................................................next /..................................... */}
              {/* ........................................slideshow component................................................................................... */}
-             <Box border='1px solid' mt='2%' boxShadow='2xl' >
+             <Box mt='2%' boxShadow='2xl' >
                 <Grid templateColumns='repeat(4, 1fr)' gap={5} ml='2%' mt='2%'>
 
                     <GridItem w='fit-content' fontWeight='bold'> <Boxes
@@ -109,10 +111,10 @@ function Home(){
                 </Grid>
             </Box>
             {/* ........................................Circle images  component................................................................................... */}
-            <Box border='1px solid' mt='2%' boxShadow='2xl' >
+            <Box  mt='2%' boxShadow='2xl' >
                 <Heading> Fall Must-Haves</Heading>
     <Flex alignItems='center' ml='10' justifyItems='center' p='6'
-     gap='2' margin='50px' border='1px solid' fontWeight='bold'>
+     gap='2' margin='50px'  fontWeight='bold'>
                         <Box ml='10'>
                         <Circleimages
                                 img='https://img.shop.com/Image/260000/266700/266794/products/1920610566.jpg?plain&size=400x400'
@@ -154,7 +156,7 @@ function Home(){
 
             {/* ........................................Another Small images  component................................................................................... */}
 
-            <Box border='1px solid' mt='2%' boxShadow='2xl' >
+            <Box  mt='2%' boxShadow='2xl' >
                 <Grid templateColumns='repeat(4, 1fr)' gap={5} ml='2%' mt='2%'>
 
                     <GridItem w='fit-content' fontWeight='bold'> <Boxes
@@ -184,10 +186,10 @@ function Home(){
             
             {/* ........................................Another Small images  component................................................................................... */}
             
-            <Box border='1px solid' mt='2%' boxShadow='2xl' >
-                <Grid templateColumns='repeat(4, 1fr)' gap={5} ml='2%' mt='2%'>
+            <Box  mt='2%' boxShadow='2xl' >
+                <Grid templateColumns='repeat(4, 1fr)' gap={5} ml='2%' mt='2%' p={5}>
 
-                    <GridItem w='fit-content' fontWeight='bold'> <Boxes
+                    <GridItem w='fit-content' fontWeight='bold' p={2}> <Boxes
                         img='https://img.shop.com/Image/homepage/fatjoe-us-eng-100507-memoir_Homepage-Feature_media_Banner1654115337667.jpeg'
                         title='2% Cashback'
                     />
@@ -211,7 +213,7 @@ function Home(){
             </Box>
 
             {/* ........................................Another Small images  component................................................................................... */}
-            <Box border='1px solid' mt='2%' boxShadow='2xl' >
+            <Box  mt='2%' boxShadow='2xl' >
                 <Heading ml='50%' > Our Brands </Heading>
                 <Grid templateColumns='repeat(5, 1fr)' gap={3} ml='2%' mt='2%'>
 
@@ -243,6 +245,7 @@ function Home(){
                     </GridItem>
                 </Grid>
             </Box>
+            <LargeWithLogoCentered />
         </>
     )
 
