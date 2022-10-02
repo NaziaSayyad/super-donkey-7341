@@ -4,7 +4,7 @@ import { useState } from "react";
 const  data = JSON.parse(localStorage.getItem("data"));
 
 function Cart() {
-    const [count,setcount] =useState(1)
+    const [count,setcount] =useState(1);
     console.log(data)
     const remove =(index) =>{
         data.splice(index,1);
